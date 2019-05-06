@@ -38,3 +38,13 @@ python3 setup.py install --user
 But there is **no** directory named as `snap-python-x.x` or something similar in `$SNAP_HOME/modules/`. 
 
 Instead, as the installation guide showed in last screenshot, `snappy` is in the directory `/Users/USERNAME/.snap/snap-python`.
+
+So get into the directort `/Users/USERNAME/.snap/snap-python/snappy`, and install `snappy` as follows:
+
+```
+python3 setup.py install --user
+```
+
+Note that `snappy` may be installed into somewhere like `/Users/USERNAME/.local/lib/python3.7/site-packages/snappy`. But it should bestly be installed into directory `site-packages` under Anaconda. This problem can be solved simply by copy files under somewhere like `/Users/USERNAME/.local/lib/python3.7/site-packages` to `/Users/USERNAME/anaconda3/lib/PYTHON3.X/site-packages`.
+
+
