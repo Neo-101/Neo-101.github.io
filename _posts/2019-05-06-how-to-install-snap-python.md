@@ -28,3 +28,13 @@ Note that there is **Select Python** step during installation as the following p
 ![My helpful screenshot](/assets/images/snap_installation_select_python.png)
 
 ### 5. Configure snap-python
+
+The steps of installation of snap-python are [here](https://github.com/senbox-org/snap-engine/tree/master/snap-python/src/main/resources). But it maybe out-of-date. It says that `snappy` can be installed as follows:
+```
+export SNAP_HOME=<path to your SNAP 5 installation>
+cd $SNAP_HOME/modules/snap-python-5.0/snappy
+python3 setup.py install --user
+```
+But there is **no** directory named as `snap-python-x.x` or something similar in `$SNAP_HOME/modules/`. 
+
+Instead, as the installation guide showed in last screenshot, `snappy` is in the directory `/Users/USERNAME/.snap/snap-python`.
