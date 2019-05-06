@@ -18,9 +18,13 @@ If some error message containing 'mvn' occurs, it may because the absence of Mav
 
 After the installation of jpy, there will be a `build` directory and a `dist` directory in the `jpy-master` directory. 
 
-Copy `build` directory into Anaconda's `site-packages' directory. It maybe `/Users/USERNAME/anaconda3/lib/PYTHON3.X/site-packages` or something else. 
+Copy `build` directory into Anaconda's `site-packages` directory. It maybe `/Users/USERNAME/anaconda3/lib/PYTHON3.X/site-packages` or something else. 
 ### 4. Install SNAP
 
+Download and install SNAP from [ESA](http://step.esa.int/main/download/).
 
+Note that there is **Select Python** step during installation as the following picture shows. Even the Python version of Anaconda is not supported according to the description, it is recommended to **select the checkbox** of *Configure SNAP for use with Python*. The reason is in next step.
 
-### 6. Configure snap-python
+![My helpful screenshot](/assets/images/snap_installation_select_python.png)
+
+### 5. Configure snap-python
