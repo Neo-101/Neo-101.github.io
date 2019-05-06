@@ -2,6 +2,8 @@
 author: Neo-101
 ---
 
+This article briefly introduces how to install ESA's SNAP and configure snap-python on Mac and Windows.
+
 # Mac
 
 ### 1. Install Anaconda
