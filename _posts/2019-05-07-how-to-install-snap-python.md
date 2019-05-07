@@ -60,7 +60,7 @@ Copy `build` directory into `site-packages` directory of Python 3.4 environment 
 
 Download and install SNAP from [ESA](http://step.esa.int/main/download/).
 
-Note that there is **Select Python** step during installation as the following picture shows. **Select the checkbox** of *Configure SNAP for use with Python*. Python executable can be found by command:
+Note that there is **Select Python** step during installation as the following screenshot shows. **Select the checkbox** of *Configure SNAP for use with Python*. Python executable can be found by command:
 
 ```
 which python
@@ -68,7 +68,7 @@ which python
 
 The path should be somewhere like `~/anaconda3/envs/SNAP/bin/python`. 
 
-![My helpful screenshot](/assets/images/snap_installation_select_python.png)
+![My helpful screenshot](/assets/images/snap_installation_select_python.png =360x)
 
 ### 5. Configure snap-python
 
