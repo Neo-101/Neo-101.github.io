@@ -68,9 +68,7 @@ which python
 
 The path should be somewhere like `~/anaconda3/envs/SNAP/bin/python`. 
 
-![My helpful screenshot](/assets/images/snap_installation_select_python.png)
-
-<img src="/assets/images/snap_installation_select_python.png" alt="Select Python" width="200"/>
+<img src="/assets/images/snap_installation_select_python.png" alt="Select Python" height="500"/>
 
 After the installation, set environmental varaiable `SNAP_HOME` like mentioned above. In `~/.bash_rc` or `~/.bash_profile`, add a line as follows:
 
