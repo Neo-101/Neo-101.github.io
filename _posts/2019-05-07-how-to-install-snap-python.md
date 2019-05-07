@@ -107,6 +107,21 @@ Next, set up snappy like this:
 ~/Applications/snap/bin/snappy-conf ~/anaconda/envs/SNAP/bin/python
 ```
 
+There may be these messages in bash:
+
+```
+Configuring SNAP-Python interface...
+Done. The SNAP-Python interface is located in '~/.snap/snap-python/snappy'
+When using SNAP from Python, either do: sys.path.append('~/.snap/snap-python')
+or copy the 'snappy' module into your Python's 'site-packages' directory.
+```
+
+So we copy the 'snappy' module into Python 3.4's 'site-packages' directory:
+
+```
+cp -R ~/.snap/snap-python/snappy ~/anaconda3/envs/SNAP/lib/python3.4/site-packages 
+```
+
 OS X may tell us it needed a legacy java and send us a [webpage](https://support.apple.com/kb/DL1572) where we can download it.
 
 Then install `snappy` as follows:
