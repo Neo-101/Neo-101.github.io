@@ -116,7 +116,7 @@ When using SNAP from Python, either do: sys.path.append('~/.snap/snap-python')
 or copy the 'snappy' module into your Python's 'site-packages' directory.
 ```
 
-So we copy the 'snappy' module into Python 3.4's 'site-packages' directory:
+So we copy the `snappy` module into Python 3.4's `site-packages` directory:
 
 ```
 cp -R ~/.snap/snap-python/snappy ~/anaconda3/envs/SNAP/lib/python3.4/site-packages 
