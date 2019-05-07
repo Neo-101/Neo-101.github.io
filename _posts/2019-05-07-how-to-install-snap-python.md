@@ -8,7 +8,37 @@ This article briefly introduces how to install ESA's SNAP and configure snap-pyt
 
 ### 1. Install Anaconda
 
-### 2. Install Java and JDK
+Anaconda is a good choice to handle different versions of Python and packages conveniently. It can be downloaded from [here](https://www.anaconda.com/distribution/).
+
+Since SNAP only supports Python versions 2.7, 3.3 and 3.4 by the date of this article (2019-05-07), we should create an environment of supported Python version to use SNAP with Python as follows:
+
+```
+conda create -n SNAP python=3.4
+```
+
+This environment may be in `/Users/<your username>/anaconda3/envs/SNAP/` or somewhere similar.
+
+### 2. Install JDK
+
+SNAP bases on Java. So JDK is needed and it can be downloaded from [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+After installation of JDK, set two environment vaiables in configuration file for bash shell. 
+
+In `~/.bash_rc` or `~/.bash_profile`, add two lines as follows:
+
+```
+export JDK_HOME="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home"
+```
+
+The name of JDK's directory may be a little different. but it doesn't matter.
+
+After that, save file and restart bash. The two new environment varaiables can be checked by commands like:
+
+```
+echo $JDK_HOME
+echo $JAVA_HOME
+```
 
 ### 3. Install jpy
 
