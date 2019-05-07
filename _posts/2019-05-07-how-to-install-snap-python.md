@@ -16,7 +16,13 @@ Since SNAP only supports Python versions 2.7, 3.3 and 3.4 by the date of this ar
 conda create -n SNAP python=3.4
 ```
 
-This environment may be in `/Users/<your username>/anaconda3/envs/SNAP/` or somewhere similar.
+This environment may be in `~/anaconda3/envs/SNAP/` or somewhere similar.
+
+Then we enter this new environment with commands as follows:
+
+```
+conda activate SNAP
+```
 
 ### 2. Install JDK
 
@@ -48,12 +54,19 @@ If some error message containing 'mvn' occurs, it may because the absence of Mav
 
 After the installation of jpy, there will be a `build` directory and a `dist` directory in the `jpy-master` directory. 
 
-Copy `build` directory into Anaconda's `site-packages` directory. It maybe `/Users/USERNAME/anaconda3/lib/PYTHON3.X/site-packages` or something else. 
+Copy `build` directory into `site-packages` directory of Python 3.4 environment we created in step 1. It maybe `~/anaconda3/envs/SNAP/lib/python3.4/site-packages` or somewhere similar. 
+
 ### 4. Install SNAP
 
 Download and install SNAP from [ESA](http://step.esa.int/main/download/).
 
-Note that there is **Select Python** step during installation as the following picture shows. Even the Python version of Anaconda is not supported according to the description, it is recommended to **select the checkbox** of *Configure SNAP for use with Python*. The reason is in next step.
+Note that there is **Select Python** step during installation as the following picture shows. **Select the checkbox** of *Configure SNAP for use with Python*. Python executable can be found by command:
+
+```
+which python
+```
+
+The path should be somewhere like `~/anaconda3/envs/SNAP/bin/python`. 
 
 ![My helpful screenshot](/assets/images/snap_installation_select_python.png)
 
@@ -67,14 +80,36 @@ python3 setup.py install --user
 ```
 But there is **no** directory named as `snap-python-x.x` or something similar in `$SNAP_HOME/modules/`. 
 
-Instead, as the installation guide showed in last screenshot, `snappy` is in the directory `/Users/USERNAME/.snap/snap-python`.
+Instead, as the installation guide showed in last screenshot, `snappy` is in the directory `~/.snap/snap-python`.
 
-So get into the directort `/Users/USERNAME/.snap/snap-python/snappy`, and install `snappy` as follows:
+First, get into the directory `jpy-master` (where we download jpy from GitHub) and type commands:
 
 ```
-python3 setup.py install --user
+cp dist/*.whl ~/.snap/snap-python/snappy
 ```
 
-Note that `snappy` may be installed into somewhere like `/Users/USERNAME/.local/lib/python3.7/site-packages/snappy`. But it should bestly be installed into directory `site-packages` under Anaconda. This problem can be solved simply by copy files under somewhere like `/Users/USERNAME/.local/lib/python3.7/site-packages` to `/Users/USERNAME/anaconda3/lib/PYTHON3.X/site-packages`.
+Next, set up snappy like this:
 
+```
+~/Applications/snap/bin/snappy-conf ~/anaconda/envs/SNAP/bin/python
+```
 
+OS X may tell us it needed a legacy java and send us a [webpage](https://support.apple.com/kb/DL1572) where we can download it.
+
+Then install `snappy` as follows:
+
+```
+cd ~/.snap/snap-python/snappy
+python setup.py install --user
+```
+
+Last but not least, we need test whether snap-python is configured correctly like this:
+
+```
+python
+import snappy
+```
+
+If there is no error message, we have successfully installed SNAP and configured snap-python.
+
+*Have fun!*
