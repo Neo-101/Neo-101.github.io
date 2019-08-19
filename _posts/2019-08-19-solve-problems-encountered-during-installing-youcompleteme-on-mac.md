@@ -1,5 +1,3 @@
-# Slove problems encountered during installing YouCompleteMe on Mac 
-
 Key: Follow README from [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe).
 
 ## DO:
