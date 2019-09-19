@@ -1,12 +1,28 @@
 # Institution
-* NHC: National Hurricane Center
-* JTWC: Joint Typehoon Warning Center
 * CPHC: Central Pacific Hurricane Center
-* NOAA: National Oceanic and Atmospheric Administration
-* NDBC: National Data Buoy Center
-* HRD: Hurricane Research Division
+* DOD: Department of Defense
 * ESA: European Space Agency
+* HRD: Hurricane Research Division
+* JAXA: Japan Aeronautics and Space Administration
+* JTWC: Joint Typhoon Warning Center
 * NASA: National Aeronautics and Space Administration
+* NCDC: National Climatic Data Center
+* NCEI: National Center for Environmental Information
+* NDBC: National Data Buoy Center
+* NHC: National Hurricane Center
+* NOAA: National Oceanic and Atmospheric Administration
+* WMO: World Meteorological Organization
+
+# Services
+* NEDIS: National Environmental Satellite Data and Information Service
+
+# Datasets
+* ATCR: Annual Tropical Cyclone Reports
+* CCMP: Cross-calibrated Multiplatform ocean surface wind velocity product
+* IBTrACS: International Best Track Archive for Climate Stewardship
+* ICOADS: International Comprehensive Ocean-Atmosphere Data Set
+* MTCSWA: Multiplatform Tropical Cyclone Surface Wind Analysis product
+*
 
 # Missions
 * TRMM: Tropical Rainfall Measuring Mission
@@ -25,6 +41,7 @@
 * TMI: Tropical Rainfall Measuring Mission Microwave Imager
 
 # Satellites
+CYGNSS: Cyclone Global Navigation Satellite System
 
 # Satellite Category
 * VIS: visible
@@ -48,6 +65,9 @@
 * IO: Indian Ocean
 * SH: Southern Hemisphere
 * WP: Western Pacific
+
+# Models
+* WRF: Weather Research Forecasting
 
 # Other:
 NRT: Near-Real Time
